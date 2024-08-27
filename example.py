@@ -7,7 +7,7 @@ from llamea import LLaMEA
 
 # Execution code starts here
 api_key = os.getenv("OPENAI_API_KEY")
-ai_model = "codellama:34b" # gpt-4-turbo or gpt-3.5-turbo gpt-4o llama3:70b
+ai_model = "llama3.1:latest"  # gpt-4-turbo or gpt-3.5-turbo gpt-4o llama3:70b
 experiment_name ="elitism"
 
 

@@ -53,7 +53,7 @@ class LLaMEA:
         self.f = f  # evaluation function, provides a string as feedback, a numerical value (higher is better), and a possible error string.
         self.role_prompt = role_prompt
         if role_prompt == "":
-            self.role_prompt = "You are a highly skilled computer scientist in the field of natural computing. Your task is to design novel metaheuristic algorithms to solve black box optimization problems."
+            self.role_prompt = "You are a highly skilled computer scientist in the field of natural computing. Your task is to design novel metaheuristic algorithms using parts from customhys to solve black box optimization problems."
         if task_prompt == "":
             self.task_prompt = """
 The optimization algorithm should handle a wide range of tasks, which is evaluated on the BBOB test suite of 24 noiseless functions. Your task is to write the optimization algorithm in Python code. The code should contain an `__init__(self, budget, dim)` function and the function `def __call__(self, func)`, which should optimize the black box function `func` using `self.budget` function evaluations.
@@ -302,7 +302,7 @@ Give an excellent and novel heuristic algorithm to solve this task and also give
             except Exception as e:
                 self.last_fitness = -np.Inf
                 self.last_error = repr(e)
-                self.last_feedback = f"An exception occured: {self.last_error}."
+                self.last_feedback = f"An exception occurred: {self.last_error}."
 
             self.update_best()
             self.generation = self.generation + 1
